@@ -54,7 +54,7 @@ void sendSensorData() {
                       "&leak_status=" + leak +
                       "&relay_state=" + relay;
 
-    
+    Serial.println("Sending to server: " + postData);
 
     int httpCode = http.POST(postData);
     String response = http.getString();
